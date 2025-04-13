@@ -53,11 +53,17 @@ const ProjectCard = ({ title, description, imageUrl, link, tools, index }: Proje
           {/* Scanner effect */}
           <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-purple/20 to-transparent z-10 opacity-0 transition-opacity duration-700 ${isHovered ? 'opacity-100 animate-scanner' : ''}`}></div>
           
-          <img 
-            src={imageUrl} 
-            alt={title}
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
+          <div className="w-full h-full">
+            <img 
+              src={imageUrl} 
+              alt={title}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+              style={{
+                objectPosition: 'center'
+              }}
+            />
+          </div>
           
           {/* Tech overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -70,6 +76,12 @@ const ProjectCard = ({ title, description, imageUrl, link, tools, index }: Proje
           {/* Bottom-left tech icon */}
           <div className={`absolute bottom-4 left-4 transform ${isHovered ? 'scale-100' : 'scale-0'} transition-all duration-500`}>
             <CircuitBoard className="text-purple w-6 h-6" />
+          </div>
+          
+          {/* Scanning line for tech effect */}
+          <div className={`absolute inset-0 overflow-hidden opacity-0 ${isHovered ? 'opacity-100' : ''} transition-opacity duration-300`}>
+            <div className="h-full w-1 bg-gradient-to-b from-transparent via-purple-light to-transparent absolute left-0 top-0 animate-scan-x"></div>
+            <div className="h-1 w-full bg-gradient-to-r from-transparent via-purple-light to-transparent absolute left-0 top-0 animate-scan-y"></div>
           </div>
         </div>
         
