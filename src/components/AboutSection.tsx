@@ -44,6 +44,16 @@ const AboutSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
           <div className="space-y-6">
+            <div className="flex justify-center lg:justify-start mb-8">
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-yellow shadow-lg">
+                <img 
+                  src="/lovable-uploads/b86b3540-2fdc-4732-9e1c-6e68b47a7c96.png" 
+                  alt="Ujjwal Jain" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
             <p className="text-lg">
               Hello! I'm <span className="text-purple font-semibold">Ujjwal Jain</span>, a creatively driven UI/UX designer 
               from JSS Noida (ECE branch). I'm passionate about crafting intuitive, engaging digital experiences 

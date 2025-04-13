@@ -66,7 +66,7 @@ const Index = () => {
             <ProjectCard 
               title="Creovate – The Ultimate Designer's Companion"
               description="A productivity tool for designers that includes mentorship, a UX chatbot, and community features."
-              imageUrl="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80"
+              imageUrl="/lovable-uploads/ec1941da-aa5f-48a8-895c-88792e43021d.png"
               link="https://www.behance.net/gallery/223406927/Creovate-The-Ultimate-Designers-Companion"
               color="purple"
               tools={["Figma", "UX Research", "Visual Design"]}
@@ -75,7 +75,7 @@ const Index = () => {
             <ProjectCard 
               title="Medikit – Your Pocket Doctor"
               description="A health-tech app offering emergency assistance, prescriptions, and AI-powered medical help."
-              imageUrl="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+              imageUrl="/lovable-uploads/b3e6f1a3-f90a-48cd-ab6e-04f6534109d7.png"
               link="https://www.behance.net/gallery/215281867/Medikit-Your-Pocket-Doctor"
               color="turquoise"
               tools={["UI Design", "Prototyping", "User Testing"]}
@@ -84,7 +84,7 @@ const Index = () => {
             <ProjectCard 
               title="E-Learning App"
               description="A student-friendly, personalized e-learning experience with a clean and intuitive interface."
-              imageUrl="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80"
+              imageUrl="/lovable-uploads/548b645c-29c9-4604-97ba-ec7dc3115b2d.png"
               link="https://www.behance.net/gallery/213992255/E-Learning-App"
               color="coral"
               tools={["Wireframing", "Visual Design", "UI Components"]}

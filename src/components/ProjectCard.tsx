@@ -38,12 +38,12 @@ const ProjectCard = ({ title, description, imageUrl, link, color, tools }: Proje
 
   return (
     <Card 
-      className="project-card h-[380px] lg:h-[450px]"
+      className="project-card h-[380px] lg:h-[450px] overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div 
-        className="h-full w-full bg-cover bg-center"
+        className="h-full w-full bg-cover bg-center relative"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         <div 
