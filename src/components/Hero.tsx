@@ -1,6 +1,5 @@
-
 import { MouseEvent, useEffect, useRef, useState } from 'react';
-import { ArrowRight, Circuit, Zap } from 'lucide-react';
+import { ArrowRight, CircuitBoard, Zap } from 'lucide-react';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -86,7 +85,7 @@ const Hero = () => {
             Hello, I'm Ujjwal. <span className="text-purple relative">
               UI/UX designer
               <span className="absolute -right-4 -top-4">
-                <Circuit className="w-6 h-6 text-purple-light animate-pulse" />
+                <CircuitBoard className="w-6 h-6 text-purple-light animate-pulse" />
               </span>
             </span> focused on creating digital experiences.
           </h1>

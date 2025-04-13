@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -6,7 +5,7 @@ import AboutSection from '@/components/AboutSection';
 import ProjectCard from '@/components/ProjectCard';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import { Bot, Zap } from 'lucide-react';
+import { Bot, Zap, CircuitBoard } from 'lucide-react';
 
 const Index = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
