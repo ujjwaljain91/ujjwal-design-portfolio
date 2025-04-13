@@ -38,14 +38,21 @@ const ProjectCard = ({ title, description, imageUrl, link, color, tools }: Proje
 
   return (
     <Card 
-      className="project-card h-[380px] lg:h-[450px] overflow-hidden"
+      className="project-card h-[450px] lg:h-[500px] overflow-hidden transition-all duration-500 hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div 
-        className="h-full w-full bg-cover bg-center relative"
-        style={{ backgroundImage: `url(${imageUrl})` }}
+        className="h-full w-full relative"
       >
+        <div className="h-full w-full absolute inset-0">
+          <img 
+            src={imageUrl} 
+            alt={title}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        
         <div 
           className={`absolute inset-0 bg-gradient-to-t ${getOverlayColor()} to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-end`}
         >
@@ -57,7 +64,7 @@ const ProjectCard = ({ title, description, imageUrl, link, color, tools }: Proje
               {tools.map((tool, index) => (
                 <span 
                   key={index}
-                  className={`text-xs px-3 py-1 rounded-full bg-white/20 text-white`}
+                  className={`text-xs px-3 py-1 rounded-full bg-white/20 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/30`}
                 >
                   {tool}
                 </span>
@@ -80,8 +87,11 @@ const ProjectCard = ({ title, description, imageUrl, link, color, tools }: Proje
         <div className={`h-1 w-full ${getBackgroundColor()}`}></div>
         
         {/* Project title when not hovered */}
-        <div className="absolute bottom-0 left-0 p-6 w-full bg-white transition-opacity duration-300"
-             style={{ opacity: isHovered ? 0 : 1 }}>
+        <div className="absolute bottom-0 left-0 p-6 w-full bg-white/90 backdrop-blur-sm transition-all duration-300"
+             style={{ 
+               opacity: isHovered ? 0 : 1,
+               transform: isHovered ? 'translateY(100%)' : 'translateY(0)'
+             }}>
           <h3 className="font-display text-xl font-semibold">{title}</h3>
           <div className="flex items-center gap-2">
             <ArrowRight size={16} className={`text-${color}`} />

@@ -62,7 +62,7 @@ const Index = () => {
         <div className="container px-4">
           <h2 className="section-title">Featured Projects</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
             <ProjectCard 
               title="Creovate – The Ultimate Designer's Companion"
               description="A productivity tool for designers that includes mentorship, a UX chatbot, and community features."

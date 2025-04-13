@@ -2,36 +2,15 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Heart, Lightbulb, Sparkles } from 'lucide-react';
 
 interface SkillProps {
   name: string;
-  level: number;
 }
 
-const SkillBar = ({ name, level }: SkillProps) => {
-  const [width, setWidth] = useState(0);
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setWidth(level);
-    }, 300);
-    
-    return () => clearTimeout(timer);
-  }, [level]);
-
+const SkillTag = ({ name }: SkillProps) => {
   return (
-    <div className="mb-4">
-      <div className="flex justify-between mb-1">
-        <span className="font-medium">{name}</span>
-        <span className="text-muted-foreground">{level}%</span>
-      </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5">
-        <div 
-          className="bg-gradient-to-r from-purple to-coral h-2.5 rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${width}%` }}
-        ></div>
-      </div>
+    <div className="px-4 py-2 bg-purple/10 text-purple rounded-full font-medium text-sm transition-all duration-300 hover:bg-purple/20 hover:scale-105 cursor-default">
+      {name}
     </div>
   );
 };
@@ -45,7 +24,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
           <div className="space-y-6">
             <div className="flex justify-center lg:justify-start mb-8">
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-yellow shadow-lg">
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-yellow shadow-lg transition-transform duration-300 hover:scale-105">
                 <img 
                   src="/lovable-uploads/b86b3540-2fdc-4732-9e1c-6e68b47a7c96.png" 
                   alt="Ujjwal Jain" 
@@ -67,45 +46,29 @@ const AboutSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Button className="bg-purple hover:bg-purple/90 text-white">
+              <Button className="bg-purple hover:bg-purple/90 text-white transition-all duration-300 hover:scale-105">
                 Download Resume
               </Button>
-              <Button variant="outline" className="border-purple text-purple hover:bg-purple/5">
+              <Button variant="outline" className="border-purple text-purple hover:bg-purple/5 transition-all duration-300 hover:scale-105">
                 My Process
               </Button>
             </div>
           </div>
           
           <div>
-            <h3 className="font-display font-bold text-xl mb-6">Design Philosophy</h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-              <Card className="p-4 hover:shadow-md transition-all bg-gradient-to-br from-purple-50 to-white border-purple/20">
-                <Heart className="text-coral mb-2" size={28} />
-                <h4 className="font-semibold text-lg">Empathy</h4>
-                <p className="text-muted-foreground">Understanding user needs and pain points</p>
-              </Card>
-              
-              <Card className="p-4 hover:shadow-md transition-all bg-gradient-to-br from-yellow-50 to-white border-yellow/20">
-                <Lightbulb className="text-yellow mb-2" size={28} />
-                <h4 className="font-semibold text-lg">Experimentation</h4>
-                <p className="text-muted-foreground">Exploring new ideas and approaches</p>
-              </Card>
-              
-              <Card className="p-4 hover:shadow-md transition-all bg-gradient-to-br from-turquoise-50 to-white border-turquoise/20">
-                <Sparkles className="text-turquoise mb-2" size={28} />
-                <h4 className="font-semibold text-lg">Innovation</h4>
-                <p className="text-muted-foreground">Pushing boundaries with creative solutions</p>
-              </Card>
-            </div>
-            
             <h3 className="font-display font-bold text-xl mb-6">Skills</h3>
-            <div>
-              <SkillBar name="Figma" level={95} />
-              <SkillBar name="User Research" level={85} />
-              <SkillBar name="Prototyping" level={90} />
-              <SkillBar name="Wireframing" level={88} />
-              <SkillBar name="UI Design" level={92} />
+            
+            <div className="flex flex-wrap gap-3">
+              <SkillTag name="Figma" />
+              <SkillTag name="User Research" />
+              <SkillTag name="Prototyping" />
+              <SkillTag name="Wireframing" />
+              <SkillTag name="UI Design" />
+              <SkillTag name="UX Design" />
+              <SkillTag name="Visual Design" />
+              <SkillTag name="User Testing" />
+              <SkillTag name="Interaction Design" />
+              <SkillTag name="Design Systems" />
             </div>
           </div>
         </div>
