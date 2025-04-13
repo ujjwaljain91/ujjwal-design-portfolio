@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -18,21 +18,20 @@ const Navbar = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'py-3 bg-white/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'
+        isScrolled ? 'py-4 bg-white/90 backdrop-blur-md shadow-sm' : 'py-6 bg-transparent'
       }`}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container max-w-5xl mx-auto px-4 flex items-center justify-between">
         <a href="#" className="font-display text-xl font-bold">
-          <span className="text-purple">Ujjwal</span>
-          <span>Jain</span>
+          Ujjwal Jain
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#about" className="nav-link">About</a>
-          <a href="#projects" className="nav-link">Projects</a>
-          <a href="#contact" className="nav-link">Contact</a>
-          <Button className="bg-purple hover:bg-purple/90 text-white">Resume</Button>
+          <a href="#about" className="nav-link text-neutral-700 hover:text-purple">About</a>
+          <a href="#projects" className="nav-link text-neutral-700 hover:text-purple">Projects</a>
+          <a href="#contact" className="nav-link text-neutral-700 hover:text-purple">Contact</a>
+          <a href="#" className="text-purple hover:text-purple/80 font-medium transition-colors">Resume</a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -54,12 +53,13 @@ const Navbar = () => {
             <a href="#about" className="nav-link text-xl" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="#projects" className="nav-link text-xl" onClick={() => setMobileMenuOpen(false)}>Projects</a>
             <a href="#contact" className="nav-link text-xl" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <Button 
-              className="bg-purple hover:bg-purple/90 text-white" 
+            <a 
+              href="#" 
+              className="text-purple text-xl font-medium" 
               onClick={() => setMobileMenuOpen(false)}
             >
               Resume
-            </Button>
+            </a>
           </div>
         </div>
       </div>

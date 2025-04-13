@@ -51,50 +51,27 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
     overflow-x: hidden;
   }
 
   ::selection {
-    @apply bg-purple text-white;
+    @apply bg-purple/20 text-purple;
   }
 }
 
 @layer components {
-  .hero-heading {
-    @apply font-display font-bold tracking-tight;
-    text-shadow: 3px 3px 0px theme('colors.purple.light');
-  }
-  
-  .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple to-turquoise;
-  }
-  
-  .project-card {
-    @apply relative overflow-hidden rounded-2xl transition-all duration-500 cursor-pointer hover:shadow-xl;
-    transform-style: preserve-3d;
-  }
-
-  .project-card::before {
-    @apply content-[''] absolute top-0 left-0 w-full h-full bg-white opacity-0 transition-opacity duration-300;
-    z-index: -1;
-  }
-
-  .project-card:hover::before {
-    @apply opacity-5;
-  }
-
-  .project-card:hover {
-    transform: translateY(-8px);
-  }
-  
   .nav-link {
-    @apply relative inline-block text-foreground hover:text-purple transition-colors duration-300 py-2;
+    @apply relative inline-block transition-colors duration-300;
   }
   
   .nav-link::after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-[2px] bg-purple transition-all duration-300 ease-in-out;
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-[1px] bg-purple transition-all duration-300 ease-in-out;
   }
   
   .nav-link:hover::after {
@@ -102,31 +79,20 @@
   }
 
   .custom-cursor {
-    @apply fixed w-8 h-8 rounded-full bg-purple pointer-events-none mix-blend-difference z-50 opacity-70 transition-transform duration-100 ease-out;
-    transform: translate(-50%, -50%);
+    @apply fixed w-12 h-12 rounded-full bg-purple pointer-events-none z-50 transition-all duration-300 ease-out;
+    mix-blend-mode: exclusion;
+  }
+  
+  .cursor-dot {
+    @apply fixed w-2 h-2 rounded-full bg-purple pointer-events-none z-50;
+    mix-blend-mode: exclusion;
   }
 
   .section-title {
-    @apply font-display font-bold text-3xl md:text-4xl mb-6 relative inline-block;
+    @apply font-display font-bold text-3xl relative inline-block mb-8;
   }
 
   .section-title::after {
-    @apply content-[''] absolute -bottom-2 left-0 w-2/3 h-1 bg-yellow rounded-full;
-  }
-  
-  .shadow-glow {
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
-  }
-  
-  .filter {
-    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
-  }
-  
-  .bg-grid-pattern {
-    background-image: 
-      linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
+    @apply content-[''] absolute -bottom-2 left-0 w-16 h-[2px] bg-purple;
   }
 }
-
