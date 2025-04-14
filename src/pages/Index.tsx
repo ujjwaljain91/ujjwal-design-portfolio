@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -216,22 +217,22 @@ const Index = () => {
           
           <div className="mt-12">
             <ProjectCard 
-              title="Creovate – The Ultimate Designer's Companion"
-              description="A productivity tool for designers that includes mentorship, a UX chatbot, and community features."
-              imageUrl="/lovable-uploads/ec1941da-aa5f-48a8-895c-88792e43021d.png"
+              title="Upskillio – Smart Learning for Engineers"
+              description="An educational platform designed for engineers with interactive learning modules and career guidance."
+              imageUrl="/lovable-uploads/39657ec2-c69e-4392-a229-1696c505e242.png"
               link="https://www.behance.net/gallery/223406927/Creovate-The-Ultimate-Designers-Companion"
               color="purple"
-              tools={["Figma", "UX Research", "Visual Design"]}
+              tools={["UX Research", "UI Design", "Educational Tech"]}
               index={0}
             />
             
             <ProjectCard 
-              title="Medikit – Your Pocket Doctor"
-              description="A health-tech app offering emergency assistance, prescriptions, and AI-powered medical help."
-              imageUrl="/lovable-uploads/b3e6f1a3-f90a-48cd-ab6e-04f6534109d7.png"
+              title="Medikit – Medical Healthcare App"
+              description="A comprehensive healthcare app offering medical assistance, prescriptions, and health monitoring features."
+              imageUrl="/lovable-uploads/2e096bb2-70fe-4267-859e-81b0492de066.png"
               link="https://www.behance.net/gallery/215281867/Medikit-Your-Pocket-Doctor"
               color="turquoise"
-              tools={["UI Design", "Prototyping", "User Testing"]}
+              tools={["UI Design", "Healthcare UX", "User Testing"]}
               index={1}
             />
             
