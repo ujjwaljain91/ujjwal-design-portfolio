@@ -53,11 +53,11 @@ const ProjectCard = ({ title, description, imageUrl, link, tools, index }: Proje
           {/* Scanner effect */}
           <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-purple/20 to-transparent z-10 opacity-0 transition-opacity duration-700 ${isHovered ? 'opacity-100 animate-scanner' : ''}`}></div>
           
-          <div className="w-full h-full">
+          <div className="w-full h-full bg-neutral-900 flex items-center justify-center">
             <img 
               src={imageUrl} 
               alt={title}
-              className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
             />
           </div>
