@@ -1,3 +1,4 @@
+
 import { CircuitBoard } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 
@@ -45,9 +46,9 @@ const ProjectsSection = () => {
           />
           
           <ProjectCard 
-            title="E-Learning App"
-            description="A student-friendly, personalized e-learning experience with a clean and intuitive interface."
-            imageUrl="/lovable-uploads/548b645c-29c9-4604-97ba-ec7dc3115b2d.png"
+            title="Upskillio – Smart Learning for Engineers"
+            description="An educational platform designed for engineers with interactive learning modules and career guidance."
+            imageUrl="/lovable-uploads/1e673243-c83f-4f30-8eeb-9b18e65a40c4.png"
             link="https://www.behance.net/gallery/213992255/E-Learning-App"
             color="coral"
             tools={["Wireframing", "Visual Design", "UI Components"]}
