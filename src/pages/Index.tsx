@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import TechBackground from '@/components/TechBackground';
 import ProjectsSection from '@/components/ProjectsSection';
-import Robot from '@/components/Robot';
+import Boy from '@/components/Boy';
 
 const Index = () => {
   return (
@@ -21,8 +21,8 @@ const Index = () => {
       <Navbar />
       <div className="relative">
         <Hero />
-        {/* Robot placed in Hero section with absolute positioning */}
-        <Robot />
+        {/* Boy placed in Hero section with absolute positioning */}
+        <Boy />
       </div>
       <AboutSection />
       <ProjectsSection />
