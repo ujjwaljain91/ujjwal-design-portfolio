@@ -19,9 +19,12 @@ const Index = () => {
       <CustomCursor />
 
       <Navbar />
-      <Hero />
+      <div className="relative">
+        <Hero />
+        {/* Robot placed in Hero section with absolute positioning */}
+        <Robot />
+      </div>
       <AboutSection />
-      <Robot />
       <ProjectsSection />
       <ContactSection />
       <Footer />
