@@ -1,4 +1,3 @@
-
 import { CircuitBoard } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 
@@ -38,7 +37,7 @@ const ProjectsSection = () => {
           <ProjectCard 
             title="Medikit – Medical Healthcare App"
             description="A comprehensive healthcare app offering medical assistance, prescriptions, and health monitoring features."
-            imageUrl="/lovable-uploads/2e096bb2-70fe-4267-859e-81b0492de066.png"
+            imageUrl="/lovable-uploads/2b4a89f4-5699-4922-9c9b-2591a96d266f.png"
             link="https://www.behance.net/gallery/215281867/Medikit-Your-Pocket-Doctor"
             color="turquoise"
             tools={["UI Design", "Healthcare UX", "User Testing"]}
