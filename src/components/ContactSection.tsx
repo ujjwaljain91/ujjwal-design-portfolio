@@ -47,7 +47,7 @@ const ContactSection = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         
-        {/* Tech circuit lines */}
+        {/* Tech circuit lines with purple and turquoise */}
         <div className="absolute top-20 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple/30 to-transparent"></div>
         <div className="absolute bottom-20 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-turquoise/30 to-transparent"></div>
         <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-purple/20 to-transparent"></div>
