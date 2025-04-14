@@ -1,4 +1,3 @@
-
 import { CircuitBoard } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 
@@ -26,12 +25,12 @@ const ProjectsSection = () => {
         
         <div className="mt-12">
           <ProjectCard 
-            title="Upskillio – Smart Learning for Engineers"
-            description="An educational platform designed for engineers with interactive learning modules and career guidance."
-            imageUrl="/lovable-uploads/39657ec2-c69e-4392-a229-1696c505e242.png"
+            title="Creovate – The Ultimate Designer's Companion"
+            description="A comprehensive design platform offering endless creative possibilities for designers and creative professionals."
+            imageUrl="/lovable-uploads/157365a6-6efd-4832-baa8-f9fa1b4f9c31.png"
             link="https://www.behance.net/gallery/223406927/Creovate-The-Ultimate-Designers-Companion"
             color="purple"
-            tools={["UX Research", "UI Design", "Educational Tech"]}
+            tools={["UX Research", "UI Design", "Design Tools"]}
             index={0}
           />
           
