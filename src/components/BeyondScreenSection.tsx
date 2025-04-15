@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Brain, Palette, UsersRound, CircuitBoard } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
@@ -19,7 +18,11 @@ const BeyondScreenSection = () => {
     {
       title: "Attended Design Samvaad",
       description: "A design dialogue and knowledge-sharing event that brought together creatives, educators, and thinkers across domains.",
-      icon: <UsersRound className="w-6 h-6 text-purple" />
+      icon: <UsersRound className="w-6 h-6 text-purple" />,
+      images: [
+        "/lovable-uploads/ac75456b-6ef9-422a-b3bd-1a8797215313.png",
+        "/lovable-uploads/98b22ee2-761f-477a-92cc-962f0c932070.png"
+      ]
     },
     {
       title: "Build With AI – Roadshow",
@@ -69,15 +72,15 @@ const BeyondScreenSection = () => {
                   </CardContent>
                 </Card>
               </HoverCardTrigger>
-              <HoverCardContent className="w-[500px] bg-black/90 border border-purple/20">
+              <HoverCardContent className="w-[600px] bg-black/90 border border-purple/20">
                 {item.images ? (
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-2 gap-3">
                     {item.images.map((img, imgIndex) => (
                       <img 
                         key={imgIndex}
                         src={img}
-                        alt={`NFT artwork ${imgIndex + 1}`}
-                        className="w-full h-40 object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                        alt={`${item.title} image ${imgIndex + 1}`}
+                        className="w-full h-64 object-cover rounded-md hover:scale-105 transition-transform duration-300"
                       />
                     ))}
                   </div>
