@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import TechBackground from '@/components/TechBackground';
 import ProjectsSection from '@/components/ProjectsSection';
-import Boy from '@/components/Boy';
+// Removed Boy import
 
 const Index = () => {
   return (
@@ -21,8 +21,7 @@ const Index = () => {
       <Navbar />
       <div className="relative">
         <Hero />
-        {/* Boy placed in Hero section with absolute positioning */}
-        <Boy />
+        {/* Removed Boy component */}
       </div>
       <AboutSection />
       <ProjectsSection />
