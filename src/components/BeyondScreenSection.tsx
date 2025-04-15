@@ -9,29 +9,17 @@ const BeyondScreenSection = () => {
     {
       title: "Created NFTs",
       description: "Designed and launched experimental NFT art pieces, exploring the intersection of tech, digital art, and ownership.",
-      icon: <Palette className="w-6 h-6 text-purple" />,
-      images: [
-        "/lovable-uploads/117cf38d-0e64-4fba-9bf1-16c3bb8cfcc9.png",
-        "/lovable-uploads/804ac4fb-5052-4504-862c-ed3586e12731.png"
-      ]
+      icon: <Palette className="w-6 h-6 text-purple" />
     },
     {
       title: "Attended Design Samvaad",
       description: "A design dialogue and knowledge-sharing event that brought together creatives, educators, and thinkers across domains.",
-      icon: <UsersRound className="w-6 h-6 text-purple" />,
-      images: [
-        "/lovable-uploads/7c8a9187-70d2-4f1d-a5a7-197dd89633af.png",
-        "/lovable-uploads/a62df15e-53a8-42e3-b479-f9fef76046da.png"
-      ]
+      icon: <UsersRound className="w-6 h-6 text-purple" />
     },
     {
       title: "Build With AI – Roadshow",
       description: "Participated in a generative AI-focused roadshow that combined hands-on tech, product ideation, and future-focused design discussions.",
-      icon: <Brain className="w-6 h-6 text-purple" />,
-      images: [
-        "/lovable-uploads/6e6a87db-d4fe-4b9f-b1bd-4c269b8e1b64.png",
-        "/lovable-uploads/4e4bd14d-03d8-4160-8d5b-ff2bb9f59b4d.png"
-      ]
+      icon: <Brain className="w-6 h-6 text-purple" />
     }
   ];
 
@@ -77,15 +65,8 @@ const BeyondScreenSection = () => {
                 </Card>
               </HoverCardTrigger>
               <HoverCardContent className="w-80 bg-black/90 border border-purple/20">
-                <div className="grid grid-cols-2 gap-2">
-                  {item.images.map((img, imgIndex) => (
-                    <img 
-                      key={imgIndex}
-                      src={img}
-                      alt={`${item.title} showcase ${imgIndex + 1}`}
-                      className="w-full h-32 object-cover rounded-md hover:scale-105 transition-transform duration-300"
-                    />
-                  ))}
+                <div className="text-neutral-300 text-sm text-center">
+                  No additional images available.
                 </div>
               </HoverCardContent>
             </HoverCard>
