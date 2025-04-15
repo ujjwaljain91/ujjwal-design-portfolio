@@ -27,7 +27,10 @@ const BeyondScreenSection = () => {
     {
       title: "Build With AI – Roadshow",
       description: "Participated in a generative AI-focused roadshow that combined hands-on tech, product ideation, and future-focused design discussions.",
-      icon: <Brain className="w-6 h-6 text-purple" />
+      icon: <Brain className="w-6 h-6 text-purple" />,
+      images: [
+        "/lovable-uploads/01212fd4-d7e3-4d97-8239-3c84f68b81a1.png"
+      ]
     }
   ];
 
@@ -65,7 +68,6 @@ const BeyondScreenSection = () => {
                       {item.description}
                     </p>
                     
-                    {/* Tech decorative elements */}
                     <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-500">
                       <div className="absolute top-0 right-0 w-32 h-32 border-l border-t border-purple/50 rounded-tl-[80px] transform translate-x-16 -translate-y-16 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500"></div>
                     </div>
