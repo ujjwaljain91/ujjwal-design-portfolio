@@ -1,3 +1,4 @@
+
 import { CircuitBoard } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 
@@ -23,7 +24,7 @@ const ProjectsSection = () => {
           </div>
         </div>
         
-        <div className="mt-12">
+        <div className="mt-12 space-y-16"> {/* Added consistent vertical spacing */}
           <ProjectCard 
             title="Creovate – The Ultimate Designer's Companion"
             description="A comprehensive design platform offering endless creative possibilities for designers and creative professionals."
