@@ -7,24 +7,20 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import TechBackground from '@/components/TechBackground';
 import ProjectsSection from '@/components/ProjectsSection';
-// Removed Boy import
+import BeyondScreenSection from '@/components/BeyondScreenSection';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Tech background elements */}
       <TechBackground />
-
-      {/* Custom robotic cursor */}
       <CustomCursor />
-
       <Navbar />
       <div className="relative">
         <Hero />
-        {/* Removed Boy component */}
       </div>
       <AboutSection />
       <ProjectsSection />
+      <BeyondScreenSection />
       <ContactSection />
       <Footer />
     </div>
