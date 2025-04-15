@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowRight, Bot, Cpu, Database, Layers } from 'lucide-react';
 
@@ -116,7 +115,9 @@ const AboutSection = () => {
             
             <div className={`pt-4 transition-all duration-1000 delay-800 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <a 
-                href="#" 
+                href="https://drive.google.com/drive/folders/1C1QLAj4ZAT6l24WQJpxDFn1ifZW_88KT?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 text-lg font-medium text-purple hover:text-purple-light transition-colors cyber-border px-6 py-3"
               >
                 <span>Download Resume</span>
