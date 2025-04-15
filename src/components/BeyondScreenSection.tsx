@@ -9,7 +9,12 @@ const BeyondScreenSection = () => {
     {
       title: "Created NFTs",
       description: "Designed and launched experimental NFT art pieces, exploring the intersection of tech, digital art, and ownership.",
-      icon: <Palette className="w-6 h-6 text-purple" />
+      icon: <Palette className="w-6 h-6 text-purple" />,
+      images: [
+        "/lovable-uploads/100747a6-539b-47b5-81a6-8ae791a33f19.png",
+        "/lovable-uploads/e0eee9cc-25d6-4e29-9466-8cf458ef296e.png",
+        "/lovable-uploads/1d2f69af-593e-4f6d-bc73-cbb06c449256.png"
+      ]
     },
     {
       title: "Attended Design Samvaad",
@@ -64,10 +69,23 @@ const BeyondScreenSection = () => {
                   </CardContent>
                 </Card>
               </HoverCardTrigger>
-              <HoverCardContent className="w-80 bg-black/90 border border-purple/20">
-                <div className="text-neutral-300 text-sm text-center">
-                  No additional images available.
-                </div>
+              <HoverCardContent className="w-[500px] bg-black/90 border border-purple/20">
+                {item.images ? (
+                  <div className="grid grid-cols-3 gap-3">
+                    {item.images.map((img, imgIndex) => (
+                      <img 
+                        key={imgIndex}
+                        src={img}
+                        alt={`NFT artwork ${imgIndex + 1}`}
+                        className="w-full h-40 object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-neutral-300 text-sm text-center">
+                    No additional images available.
+                  </div>
+                )}
               </HoverCardContent>
             </HoverCard>
           ))}
